@@ -1,0 +1,17 @@
+create function doAddition(a number, b number ) 
+return number as 
+v_output number  :=0;
+begin
+  
+  v_output := nvl(a,0)+ nvl(b,0);
+  
+  return v_output;
+
+end;
+
+
+how to run
+
+select doAddition(2,5) from dual
+
+select doAddition(null,5) from dual
