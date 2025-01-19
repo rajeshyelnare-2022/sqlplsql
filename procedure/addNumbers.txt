@@ -1,0 +1,21 @@
+create or replace procedure addNumbers(p_a number, 
+          p_b number,
+		  p_output out number ) is
+v_output number  :=0;
+begin
+  
+  v_output := nvl(p_a,0)+ nvl(p_b,0);
+  
+  p_output := v_output;
+  
+end;
+
+
+How to run the procedure 
+
+declare
+    p_sum number := 0;
+begin
+ addNumbers(10,20,p_sum) ;
+ dbms_output.put_line(' sum is ->'||p_sum);
+end;
