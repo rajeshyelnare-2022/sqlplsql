@@ -1,2 +1,3 @@
-# sqlplsql
-sqlplsql
+# To run use 
+
+https://livesql.oracle.com/
