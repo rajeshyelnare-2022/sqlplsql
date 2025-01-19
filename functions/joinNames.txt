@@ -1,0 +1,28 @@
+create or replace function joinNames(firstName varchar2, lastName varchar2 ) 
+return varchar2 as 
+v_output varchar2(4000)  :=null;
+begin
+  
+  if(firstName is null and lastName is null) then 
+  
+         return ' Both first and last name are null ';
+  
+  end if;
+  
+  v_output := firstName ||' '||lastName;
+  
+  return v_output;
+
+end;
+
+select joinNames('MyFirstName','MySecondName') from dual
+
+select joinNames('MyFirstName',null) from dual
+
+
+select joinNames(null,null) from dual
+
+run below in https://livesql.oracle.com/ 
+
+select joinnames(first_name,last_name) from hr.employees
+

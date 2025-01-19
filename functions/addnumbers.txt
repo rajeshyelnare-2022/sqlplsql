@@ -1,4 +1,4 @@
-create function doAddition(a number, b number ) 
+create or replace function doAddition(a number, b number ) 
 return number as 
 v_output number  :=0;
 begin
@@ -9,8 +9,10 @@ begin
 
 end;
 
+______
 
-how to run
+
+Test SQLs - 
 
 select doAddition(2,5) from dual
 
